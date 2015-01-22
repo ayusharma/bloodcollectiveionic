@@ -3,9 +3,17 @@
 
  <div class="card">
   <div class="item item-text-wrap text-center">
-    <h2>What's the type of Blood are you looking for ?</h2>
-    <select>
+    <h5>What's the type of Blood are you looking for ?</h5>
+    <select style="border:0px; border-radius:0px; font-size:8px; color:#fff; font-weight:bold; padding:5px; background-color:#F34336;">
     	<option>A+</option>
+    	<option>A-</option>
+    	<option>B+</option>
+    	<option>B-</option>
+    	<option>O+</option>
+    	<option>O-</option>
+    	<option>AB+</option>
+    	<option>AB-</option>
+    	<option>Bombay Blood Group</option>
     </select>
   </div>
 </div>
@@ -16,7 +24,7 @@
         <ui-gmap-circle ng-repeat="c in circles track by c.id" center="c.center" stroke="c.stroke" fill="c.fill" radius="c.radius"
                 visible="c.visible" geodesic="c.geodesic" editable="c.editable" draggable="c.draggable" clickable="c.clickable"></ui-gmap-circle>
     </ui-gmap-google-map> -->
-  <img src="img/map.png" id="mapimage">
+  <img src="img/map.png" id="mapimage" style="max-width:100%;">
 
 
   </div>

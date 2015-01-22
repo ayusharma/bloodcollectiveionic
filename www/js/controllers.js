@@ -42,6 +42,7 @@ angular.module('starter.controllers', [])
   }).then(function(modal) {
     $scope.modal = modal;
   });
+  $scope.resp = true;
   $scope.openModal = function() {
     $scope.modal.show();
   };
@@ -51,15 +52,60 @@ angular.module('starter.controllers', [])
   //Cleanup the modal when we're done with it!
   $scope.$on('$destroy', function() {
     $scope.modal.remove();
+    $scope.resp = true;
+    $scope.respShow = false;
   });
   // Execute action on hide modal
   $scope.$on('modal.hidden', function() {
-    // Execute action
+    $scope.resp = true;
+    $scope.respShow = false;
   });
   // Execute action on remove modal
   $scope.$on('modal.removed', function() {
-    // Execute action
+    $scope.resp = true;
+    $scope.respShow = false;
   });
+  
+  $scope.openResp = function () {
+    $scope.resp = false;
+    $scope.respShow = true;
+  }
+
+
+
+// $ionicModal.fromTemplateUrl('templates/sendresp.html', {
+//     scope: $scope,
+//     animation: 'slide-in-up'
+//   }).then(function(modal) {
+//     $scope.modal = modal;
+//   });
+//   $scope.openResp = function() {
+//     $scope.modal.show();
+//   };
+//   $scope.closeResp = function() {
+//     $scope.modal.hide();
+//   };
+//   //Cleanup the modal when we're done with it!
+//   $scope.$on('$destroy', function() {
+//     $scope.modal.remove();
+//   });
+//   // Execute action on hide modal
+//   $scope.$on('modal.hidden', function() {
+//     // Execute action
+//   });
+//   // Execute action on remove modal
+//   $scope.$on('modal.removed', function() {
+//     // Execute action
+//   });
+
+
+
+
+
+
+
+
+
 
   // $scope.map = {center: {latitude: 23.1550519, longitude: 72.66679909999999 }, zoom: 15 };
   //       $scope.options = {scrollwheel: false};
@@ -97,5 +143,34 @@ angular.module('starter.controllers', [])
 
 })
 .controller('BrowseCtrl',function  ($scope) {
+  
+})
+.controller('AlertCtrl',function  ($scope,$ionicModal) {
+  $ionicModal.fromTemplateUrl('templates/volunteer.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.resp = true;
+  $scope.openVol = function() {
+    $scope.modal.show();
+  };
+  $scope.closeVol = function() {
+    $scope.modal.hide();
+  };
+  //Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+    
+  });
+  // Execute action on hide modal
+  $scope.$on('modal.hidden', function() {
+ 
+  });
+  // Execute action on remove modal
+  $scope.$on('modal.removed', function() {
+ 
+  });
   
 });

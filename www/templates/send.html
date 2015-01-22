@@ -5,7 +5,7 @@
       <button class="button button-clear" ng-click="closeModal()"><i class="ion-android-close"></i></button>
     </div>
   </ion-header-bar>
-  <ion-content>
+  <ion-content ng-show="resp">
     <h5 class="text-center">Fill in your contact details so the volunteers can get touch with you quickly.</h5>
     <form ng-submit="doLogin()">
       <div class="list">
@@ -18,9 +18,13 @@
           <input type="password" ng-model="loginData.password">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Send</button>
+          <button class="button button-block button-positive" ng-click="openResp()">Send</button>
         </label>
       </div>
     </form>
+  </ion-content>
+   <ion-content ng-show="respShow">
+    <h4 class="text-center padding">Your request has been sent to volunteers in a 5 KM radius.</h4>
+    <h4 class="text-center padding">We'll notify as soon as someone responds, Hang Tight !</h4>
   </ion-content>
 </ion-modal-view>

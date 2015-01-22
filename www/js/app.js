@@ -67,6 +67,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'HomeCtrl'
         }
       }
+    })
+    .state('app.alert', {
+      url: "/alert",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/alert.html",
+          controller: 'AlertCtrl'
+        }
+      }
     });
 
   // .state('app.single', {
