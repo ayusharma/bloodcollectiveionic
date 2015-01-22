@@ -1,0 +1,36 @@
+/* Empty. Add your own CSS if you like */
+
+ion-header-bar {
+	background-color: #c33731 !important;
+}
+	
+.bar.bar-stable .title {
+	color:#fff !important;
+}
+
+#google_canvas {
+	height:100% !important;
+}
+#google_canvas h1 {
+	font-size:16px !important;
+}
+#google_canvas h2 {
+	font-size:14px !important;
+	font-weight:300 important;
+}
+
+.bar-stable .button.button-clear {
+	color: #FFF !important;
+}
+
+#mapimage {
+	width: 100%;
+	height: 300px;
+}
+
+.title {
+	color: #fff !important;
+}
+#pfpic img {
+	width: 300px;
+}

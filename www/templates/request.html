@@ -1,0 +1,31 @@
+<ion-view view-title="Find A Donor">
+  <ion-content>
+
+ <div class="card">
+  <div class="item item-text-wrap text-center">
+    <h2>What's the type of Blood are you looking for ?</h2>
+    <select>
+    	<option>A+</option>
+    </select>
+  </div>
+</div>
+<div class="card">
+  <div class="item item-text-wrap" id="map_canvas">
+ <!-- 
+    <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
+        <ui-gmap-circle ng-repeat="c in circles track by c.id" center="c.center" stroke="c.stroke" fill="c.fill" radius="c.radius"
+                visible="c.visible" geodesic="c.geodesic" editable="c.editable" draggable="c.draggable" clickable="c.clickable"></ui-gmap-circle>
+    </ui-gmap-google-map> -->
+  <img src="img/map.png" id="mapimage">
+
+
+  </div>
+</div>
+<!-- <button class="button button-full button-assertive" ng-click="openModal()">
+Send Request
+</button> -->
+  </ion-content>
+  <div class="bar bar-footer bar-assertive" ng-click="openModal()">
+  <div class="title">Send Request</div>
+</div>
+</ion-view>
