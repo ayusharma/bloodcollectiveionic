@@ -7,18 +7,18 @@
   </ion-header-bar>
   <ion-content ng-show="resp">
     <h5 class="text-center">Fill in your contact details so the volunteers can get touch with you quickly.</h5>
-    <form ng-submit="doLogin()">
+    <form ng-submit="getNo()">
       <div class="list">
         <label class="item item-input">
           <span class="input-label">Name</span>
-          <input type="text" ng-model="loginData.username">
+          <input type="text" data-ng-model="log.mname">
         </label>
         <label class="item item-input">
           <span class="input-label">Phone No</span>
-          <input type="password" ng-model="loginData.password">
+          <input type="text" data-ng-model="log.mno">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" ng-click="openResp()">Send</button>
+          <button class="button button-block button-positive" type="submit" ng-click="openResp()">Send</button>
         </label>
       </div>
     </form>

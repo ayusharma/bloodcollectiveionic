@@ -1,3 +1,4 @@
+
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
@@ -45,10 +46,12 @@ angular.module('starter.controllers', [])
   $scope.resp = true;
   $scope.openModal = function() {
     $scope.modal.show();
+    
   };
   $scope.closeModal = function() {
     $scope.modal.hide();
   };
+  
   //Cleanup the modal when we're done with it!
   $scope.$on('$destroy', function() {
     $scope.modal.remove();
@@ -65,10 +68,31 @@ angular.module('starter.controllers', [])
     $scope.resp = true;
     $scope.respShow = false;
   });
+
+  $scope.log = {};
+  $scope.log.mno = ' ';
+  $scope.log.mname = ' ';
+  $scope.log.bgroup = ' ';
+
   
   $scope.openResp = function () {
+    
     $scope.resp = false;
     $scope.respShow = true;
+    //alert($scope.log.bgroup);
+    
+    var messageInfo = {
+      phoneNumber: $scope.log.mno,
+      textMessage: 'Hi, I am '+$scope.log.mname+'. I am in need of '+$scope.log.bgroup+' blood. Kindly donate',
+    };
+
+    sms.sendMessage(messageInfo, function(message) {
+        alert("success: " + message);
+    }, function(error) {
+        alert("code: " + error.code + ", message: " + error.message);
+    });
+
+
   }
 
 
