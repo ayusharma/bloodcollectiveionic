@@ -1,4 +1,5 @@
-<img src="screenshots/blood.png" width="500"/>
+![](screenshots/blood.png)
+
 ### Blood Collective - Community Driven Blood Donation Network
 ***
 
